@@ -1,0 +1,5 @@
+package com.mod5Api.Agencia.entities;
+
+public class Destino {
+
+}

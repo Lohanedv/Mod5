@@ -1,0 +1,8 @@
+server.port = 8081
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+
+#Banco local - Bancodd
+spring.datasource.url=jdbc:postgresql://localhost:8081/produtos-apirest
+spring.datasource.username=SeuUsuário, o usuário padrão é postgres
+spring.datasource.password= SuaSenha
+spring.jpa.hibernate.ddl-auto=update

@@ -1,0 +1,5 @@
+package com.lohvieira.mod5Api.entities;
+
+public @interface Pessoa {
+
+}

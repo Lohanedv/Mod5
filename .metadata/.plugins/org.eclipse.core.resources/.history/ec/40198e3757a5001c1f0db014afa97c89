@@ -1,0 +1,9 @@
+package com.lohvieira.mod5Api.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.lohvieira.mod5Api.pessoa;
+
+public interface PessoaRepository extends JpaRepository<pessoa,Long> {
+
+}

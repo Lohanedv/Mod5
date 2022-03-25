@@ -1,0 +1,6 @@
+package .com.lohvieira.mod5Api.repositories;
+
+
+public interface PessoaRepository {
+
+}

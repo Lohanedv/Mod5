@@ -1,0 +1,73 @@
+package com.lohvieira.mod5Api.entities;
+
+import java.util.Objects;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Destino {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	private String DestinoViagem;
+	private double DataIda;
+	private double DataVolta;
+	
+	public Destino(long id, String destinoViagem, double dataIda, double dataVolta) {
+		
+		this.id = id;
+		DestinoViagem = destinoViagem;
+		DataIda = dataIda;
+		DataVolta = dataVolta;
+	}
+	public Destino() {
+		
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getDestinoViagem() {
+		return DestinoViagem;
+	}
+	public void setDestinoViagem(String destinoViagem) {
+		DestinoViagem = destinoViagem;
+	}
+	public double getDataIda() {
+		return DataIda;
+	}
+	public void setDataIda(double dataIda) {
+		DataIda = dataIda;
+	}
+	public double getDataVolta() {
+		return DataVolta;
+	}
+	public void setDataVolta(double dataVolta) {
+		DataVolta = dataVolta;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(DataIda, DataVolta, DestinoViagem);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		
+		Destino other = (Destino) obj;
+		return Double.doubleToLongBits(DataIda) == Double.doubleToLongBits(other.DataIda)
+				&& Double.doubleToLongBits(DataVolta) == Double.doubleToLongBits(other.DataVolta)
+				&& Objects.equals(DestinoViagem, other.DestinoViagem);
+	}
+}

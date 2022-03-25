@@ -1,0 +1,5 @@
+package com.mod5Api.Agencia.repositories;
+
+public class DestinoRepository {
+
+}

@@ -1,0 +1,23 @@
+package com.lohvieira.mod5Api.services;
+
+import org.hibernate.mapping.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lohvieira.mod5Api.entities.Pessoa;
+import com.lohvieira.mod5Api.repositories.PessoaRepository;
+
+@Service
+public class PessoaService {
+	public static java.util.List<Pessoa> findAll;
+	@Autowired
+	private PessoaRepository repository;
+	
+	@Transactional(readOnly = true)
+	public static java.util.List<Pessoa> findAll(){
+		java.util.List<Pessoa> resultado = repository.findAll();
+		return resultado;
+	}
+	
+}
